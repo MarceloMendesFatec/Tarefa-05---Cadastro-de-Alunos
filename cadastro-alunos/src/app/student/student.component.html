@@ -1,15 +1,15 @@
 <h1>My Students</h1>
  
    
-   <table border= "2" *ngFor=" let Student of teste">
+   <table border="1rem">
         <tr>
             <th>Id</th>
             <th>Nome</th>
             <th>Idade</th>
             <th>Sala de Aula</th>
         </tr>
-        <tr> 
-            <td>{{Student.id }}</td>
+        <tr *ngFor=" let Student of teste"> 
+            <td ><b>{{Student.id }}</b></td>
             <td>{{Student.name | uppercase}}</td>
             <td>{{Student.age}}</td>
             <td>{{Student.room}} </td>
