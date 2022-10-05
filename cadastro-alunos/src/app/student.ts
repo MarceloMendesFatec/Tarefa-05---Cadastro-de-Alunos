@@ -1,6 +1,6 @@
 export interface Student{
     id: number;
     name: string;
-    classroom: number;
+    room: number;
     age: number;
-}classroomCreate mock
+}
