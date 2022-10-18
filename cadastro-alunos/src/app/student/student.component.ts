@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { List } from '../mock-students';
+import { Student } from '../student';
+
 
 
 @Component({
@@ -11,9 +13,16 @@ export class StudentComponent implements OnInit {
 
   teste = List;
   
+  selectedStudent?:Student;
+  onSelect(x: Student): void{
+    this.selectedStudent = x;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  
 
 }
