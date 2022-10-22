@@ -12,17 +12,22 @@ import { Student } from '../student';
 export class StudentComponent implements OnInit {
 
   teste = List;
-  
-  selectedStudent?:Student;
-  onSelect(x: Student): void{
-    this.selectedStudent = x;
-  }
+  isDisplay = true;
+
+
+  selectedStudent?:Student | null;
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  
+  onSelect(x: Student): void{
+    this.selectedStudent = x;
+
+  }
+
+
 
 }

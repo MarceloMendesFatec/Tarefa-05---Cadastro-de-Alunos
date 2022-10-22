@@ -1,36 +1,41 @@
 <h1>My Students</h1>
- 
 
- <div *ngIf="selectedStudent">
 
-    <h2>{{selectedStudent.name | uppercase}}</h2>
-    <input placeholder="Nome do aluno">
-    <input placeholder="Idade">
-    
 
-</div>
+    <div  class="selectedStudent1"  *ngIf="selectedStudent">
+      <h2>{{selectedStudent.name | uppercase}}</h2>
+      <span> Ra: {{selectedStudent.ra}}</span>
+      <input id="inputSelected"
+      placeholder="Nome do aluno"
+      [(ngModel)]="selectedStudent.name"
+      >
+      <input id="inputSelected"
+      placeholder="Registro do aluno"
+      [(ngModel)]="selectedStudent.ra"
+      >
+    </div>
 
- <table border="1rem">
+ <table class="table" border="1rem">
         <tr>
             <th>Id</th>
             <th>Nome</th>
             <th>Idade</th>
-            <th>Sala de Aula</th>
-            <th></th>
+            <th>Registro do aluno</th>
+            <th>↓</th>
         </tr>
-        <tr *ngFor=" let Student of teste"> 
+        <tr *ngFor=" let Student of teste">
             <td><b>{{Student.id }}</b></td>
             <td>{{Student.name | uppercase}}</td>
             <td>{{Student.age}}</td>
             <td>{{Student.ra}} </td>
             <td><button  type="button" (click)="onSelect(Student)">Editar</button></td>
          </tr>
-        
+
    </table>
-   
-    
-     
-      
-    
+
+
+
+
+
 
 
