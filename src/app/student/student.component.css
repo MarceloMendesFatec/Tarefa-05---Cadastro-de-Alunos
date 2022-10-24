@@ -88,3 +88,19 @@ button{
 .table{
   margin: auto;
 }
+
+
+.editButton{
+  background-color: #E8A09E;
+  border: 1px solid #9C9489;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgb(27, 26, 26);
+
+}
+
+Button:hover{
+  color: #1892cf;
+  background-color: #e6e6e6;
+  left: .1em;
+  cursor: pointer;
+}

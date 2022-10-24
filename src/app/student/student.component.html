@@ -1,18 +1,12 @@
 <h1>My Students</h1>
 
-<div class="container">
+<div class="container" >
   <div  class="selectedStudent1"  *ngIf="selectedStudent">
     <h2>{{selectedStudent.name | uppercase}}</h2>
     <span> Ra: {{selectedStudent.ra}}</span>
-    <input id="inputSelected"
-    placeholder="Nome do aluno"
-    [(ngModel)]="selectedStudent.name"
-    >
-    <input id="inputSelected"
-    placeholder="Registro do aluno"
-    [(ngModel)]="selectedStudent.ra"
-    >
-  </div>
+    <input id="inputSelected" placeholder="Nome do aluno" [(ngModel)]="selectedStudent.name" >
+    <input id="inputSelected" placeholder="Registro do aluno" [(ngModel)]="selectedStudent.ra">
+ </div>
 
 <table class="table" border="1rem">
       <tr>
@@ -27,7 +21,7 @@
           <td>{{Student.name | uppercase}}</td>
           <td>{{Student.age}}</td>
           <td>{{Student.ra}} </td>
-          <td><button  type="button" (click)="onSelect(Student)">Editar</button></td>
+          <td><button [class.editButton]=" Student === selectedStudent"  type="button" (click)="onSelect(Student)">Editar</button></td>
        </tr>
  </table>
 </div>

@@ -12,11 +12,9 @@ import { Student } from '../student';
 export class StudentComponent implements OnInit {
 
   teste = List;
-  isDisplay = true;
-
-
-  selectedStudent?:Student | null;
-
+  binding: string ='';
+  selectedStudent?:Student;
+  isDisplay= true;
 
   constructor() { }
 
@@ -25,9 +23,6 @@ export class StudentComponent implements OnInit {
 
   onSelect(x: Student): void{
     this.selectedStudent = x;
-
   }
-
-
-
 }
+
